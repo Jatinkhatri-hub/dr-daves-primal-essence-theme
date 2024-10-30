@@ -109,7 +109,7 @@
 }
 
 
-.dd__custom-field {
+.dd__custom-field::after {
   border-radius: 8px;
   overflow: hidden;
 }
