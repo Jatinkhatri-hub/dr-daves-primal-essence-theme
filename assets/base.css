@@ -9,8 +9,13 @@
 }
 
 @font-face {
-  font-family: 'Sofia Pro Bold';
+  font-family: 'Sofia Pro Light';
   src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Sofia_Pro_Light_Az.otf?v=1730282853');
+}
+
+@font-face {
+  font-family: ;
+  src: url();
 }
 
 .product-card-wrapper .card,
