@@ -248,8 +248,10 @@
     align-items: center;
   }
 
+  .footer__copyright-content
+
   .footer__copyright-content a {
-    font-size: ;
+    font-size: 15px;
   }
 
 
