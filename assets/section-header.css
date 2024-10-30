@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'Futura PT ';
-  src: url();
+  font-family: 'Futura PT Bold';
+  src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/FuturaCyrillicBold.woff?v=1730279373');
 }
 
 .section-header__bar {
