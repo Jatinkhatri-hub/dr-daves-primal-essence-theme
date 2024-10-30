@@ -82,7 +82,9 @@
   }
 
   .footer__menu-wrapper-child a {
-    font: 16px
+    font: 16px 'Sofia Pro Regular';
+    color: white;
+    b
   }
   
   .footer__menu-wrapper-child.visible {
