@@ -187,9 +187,10 @@
 }
 
 .footer__copyright-content a {
-  font: 400 16px 'Montserrat';
-  color: rgb(var(--color-foreground));
+  font: 10px 'Sofia Pro Light';
+  color: #0A3437;
   text-transform: capitalize;
+  text-decoration: none;
 }
 
 .footer__policies {
