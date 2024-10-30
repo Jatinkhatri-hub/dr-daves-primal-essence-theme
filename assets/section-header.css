@@ -3,6 +3,11 @@
   src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/FuturaCyrillicMedium.woff?v=1729828394');
 }
 
+@font-face {
+  font-family: 'Futura PT ';
+  src: url();
+}
+
 .section-header__bar {
   display: flex;
   justify-content: space-between;
