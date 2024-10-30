@@ -364,7 +364,7 @@
   }
 
   .nav-bar__menu-item {
-    font: 400 16px 'Sofia Pro ';
+    font: 400 16px 'Sofia Pro Regular';
     color: rgb(var(--color-foreground));
     text-transform: capitalize;
     text-decoration: none;
