@@ -29,7 +29,7 @@
 
 .footer__brand-description p {
   text-align: center;
-  font: 400 16 'Sofia Pro Light';
+  font: 400 16px 'Sofia Pro Light';
   color: rgb(var(--color-foreground));
   margin-block: 1em 0;
 }
