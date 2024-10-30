@@ -195,20 +195,7 @@
   text-decoration: none;
 }
 
-.footer__policies {
-  font: 400 14px 'Montserrat';
-  color: rgb(var(--color-foreground));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 25px;
-  width: 100%;
-}
 
-.footer__policies-item a {
-  font: 400 13px 'Montserrat';
-  color: rgb(var(--color-foreground));
-}
 
 
 @media screen and (min-width: 789px) {
