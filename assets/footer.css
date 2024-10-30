@@ -91,7 +91,11 @@
 }
 
 .footer__newsletter-wrapper {
-  d
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: ;
 }
 
 .newsletter__title {
