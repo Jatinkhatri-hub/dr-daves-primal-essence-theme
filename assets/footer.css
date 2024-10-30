@@ -92,7 +92,8 @@
 
 .newsletter__title {
   text-align: center;
-  font: ;
+  font: 700 26px 'Sofia Pro SemiBold';
+  color: white;
 }
 
 .footer__terms-wrapper {
