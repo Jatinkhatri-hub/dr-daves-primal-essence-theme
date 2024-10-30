@@ -18,6 +18,11 @@
   src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Sofia_Pro_Bold_Az.otf?v=1730282808');
 }
 
+@font-face {
+  font-family: 'Sofia Pro SemiBold';
+  src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Sofia_Pro_Semi_Bold_Az.otf?v=1730283340');
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
