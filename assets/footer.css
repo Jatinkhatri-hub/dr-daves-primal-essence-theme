@@ -136,7 +136,7 @@
 
 .dd__custom-field {
   border-radius: 8px;
-  overflow: ;
+  overflow: hidden;
 }
 
 .dd__custom-field::after {
@@ -144,6 +144,10 @@
   overflow: hidden;
   box-shadow: none;
   border: 1px solid #155F64;
+}
+
+.dd__custom-field:focus {
+  o
 }
 
 .newsletter__description {
