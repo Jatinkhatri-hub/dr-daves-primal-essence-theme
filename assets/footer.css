@@ -13,7 +13,9 @@
   flex-direction: column;
 }
 
-.footer
+.footer__brand-heading {
+  
+}
 
 .footer__brand-description {
   text-align: center;
