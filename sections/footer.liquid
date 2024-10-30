@@ -89,7 +89,9 @@
             <li>
               <a
                 id="parent-link" 
+                {% if link.links == blank %}
                 href="{{ link.url }}"
+                {% endif %}
                 class="footer__list-item"
               >
                 {{ link.title |  escape }}
