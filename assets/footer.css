@@ -135,7 +135,8 @@
 }
 
 .dd__custom-field {
-  
+  border-radius: 8px;
+  overflow: ;
 }
 
 .dd__custom-field::after {
