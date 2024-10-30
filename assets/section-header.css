@@ -197,9 +197,11 @@
   margin: 0;
   display: flex;
   gap: 85px;
-  padding: 0
+  padding: 0;
   
 }
+
+.product-st
 
 .parent_link {
   font: 18px 'Futura PT Medium';
