@@ -85,6 +85,7 @@
     font: 16px 'Sofia Pro Regular';
     color: white;
     text-decoration: none;
+    text-transform: uppercase;
   }
   
   .footer__menu-wrapper-child.visible {
