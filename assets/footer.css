@@ -255,6 +255,7 @@
 
   .footer__newsletter-wrapper {
     width: 340px;
+    align-items: baseline;
   }
 
 }
