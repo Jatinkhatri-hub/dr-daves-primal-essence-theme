@@ -115,9 +115,12 @@
 
 .dd__field-input {
   background: white;
-  
+
 }
 
+.dd__field-input {
+  border-radius: ;
+}
 
 .dd__custom-field::after {
   border-radius: 8px;
