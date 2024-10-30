@@ -248,7 +248,11 @@
     align-items: center;
   }
 
-  
+  .footer__copyright-content a {
+    font-size: ;
+  }
+
+
 
   .footer__policies {
     justify-content: flex-end;
