@@ -184,12 +184,12 @@
 }
 
 .footer__copyright-content {
-  font: 10px 'Sofia Pro Light';
+  font: 12px 'Sofia Pro Light';
   color: #0A3437;
 }
 
 .footer__copyright-content a {
-  font: 10px 'Sofia Pro Light';
+  font: 12px 'Sofia Pro Light';
   color: #0A3437;
   text-transform: capitalize;
   text-decoration: none;
