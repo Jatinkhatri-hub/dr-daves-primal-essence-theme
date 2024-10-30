@@ -253,7 +253,9 @@
     margin: 0;
   }
 
-  .footer__newsletter
+  .footer__newsletter-wrapper {
+    width: 340px;
+  }
 
 }
 
