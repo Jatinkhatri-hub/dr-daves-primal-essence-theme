@@ -119,7 +119,8 @@
 }
 
 .dd__field-input {
-  border-radius: ;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .dd__custom-field::after {
