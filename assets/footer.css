@@ -263,7 +263,8 @@
   }
 
   .newsletter__description {
-    padin
+    padding-inline: 0;
+    text-align: start;
   }
 
 }
