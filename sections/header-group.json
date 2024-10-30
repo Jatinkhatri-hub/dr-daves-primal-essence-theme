@@ -59,12 +59,19 @@
             "button_url": "shopify://collections/best-sellers",
             "button_text": "SHOP NOW"
           }
+        },
+        "menu_7nnGik": {
+          "type": "menu",
+          "settings": {
+            "menu": "primal-essence-nav"
+          }
         }
       },
       "block_order": [
         "product_6HtfyH",
         "product_QYYV3j",
-        "button_Vfqw8z"
+        "button_Vfqw8z",
+        "menu_7nnGik"
       ],
       "settings": {
         "color_scheme": "scheme-1",
