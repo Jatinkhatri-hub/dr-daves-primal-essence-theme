@@ -52,7 +52,8 @@
 
 .footer__menu-list li {
   list-style-type: none;
-  display: f;
+  display: flex;
+  justify-content: center;
 }
 
 .footer__list-item {
