@@ -20,7 +20,8 @@
 .footer__brand-description {
   text-align: center;
   padding-bottom: 20px;
-  re
+  text-align: center;
+  margin-top: 0;
 }
 
 .footer__brand-description p {
