@@ -100,7 +100,7 @@
 
 .nav-drawer__title {
   font: 800 28px 'Futura PT Bold';
-  color: rgb(var(--color-foreground));
+  color: #1C5254;
   text-align: start;
   margin: 0;
   text-transform: uppercase;
