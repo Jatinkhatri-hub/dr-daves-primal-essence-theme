@@ -149,7 +149,9 @@
 
 .dd__custom-field:focus {
   outline: 0;
-  
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
 }
 
 .newsletter__description {
