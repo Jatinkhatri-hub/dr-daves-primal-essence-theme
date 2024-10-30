@@ -144,10 +144,12 @@
   overflow: hidden;
   box-shadow: none;
   border: 1px solid #155F64;
+  outline: 0;
 }
 
 .dd__custom-field:focus {
-  o
+  outline: 0;
+  
 }
 
 .newsletter__description {
