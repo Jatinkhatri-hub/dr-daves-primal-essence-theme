@@ -201,7 +201,11 @@
   
 }
 
-.product-st
+.product-star__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .parent_link {
   font: 18px 'Futura PT Medium';
