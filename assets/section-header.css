@@ -201,7 +201,7 @@
   
 }
 
-.product-star__wrapper {
+.product__star-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
