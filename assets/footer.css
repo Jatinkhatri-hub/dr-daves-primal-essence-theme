@@ -131,7 +131,7 @@
 .field__button.custom {
   height: 45px;
   width: 45px;
-  
+  background-color: ;
 }
 
 .dd__custom-field::after {
