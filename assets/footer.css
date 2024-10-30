@@ -137,6 +137,8 @@
 .dd__custom-field::after {
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: none;
+  border
 }
 
 .newsletter__description {
