@@ -131,6 +131,7 @@
   text-decoration: none;
   position: relative;
   flex-direction: row-reverse;
+  overflow: hidden;
 }
 
 .nav-drawer__product-info {
