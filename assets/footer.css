@@ -124,7 +124,8 @@
 }
 
 .field__label.custom {
-  font: 16px ;
+  font: 16px 'Futura PT Light';
+  col
 }
 
 .dd__custom-field::after {
