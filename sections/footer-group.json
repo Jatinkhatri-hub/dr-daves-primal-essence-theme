@@ -19,10 +19,18 @@
           "settings": {
             "show_social": true
           }
+        },
+        "link_list_twCKfk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "primal-essence"
+          }
         }
       },
       "block_order": [
-        "brand_information_rm7JcD"
+        "brand_information_rm7JcD",
+        "link_list_twCKfk"
       ],
       "settings": {
         "color_scheme": "scheme-a95b59ad-3f4e-4585-8aec-fbc029173b49",
