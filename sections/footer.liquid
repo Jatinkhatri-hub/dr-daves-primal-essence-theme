@@ -182,23 +182,10 @@
   
     <div class="footer__copyright--wrapper">
       <span class="footer__copyright-content"
-        >&copy; {{ 'now' | date: '%Y' }}, {{ "Noetic "  | link_to: routes.root_url -}}
+        >&copy; {{ 'now' | date: '%Y' }}, {{ ""  | link_to: routes.root_url -}}
       </span>
       <span class="footer__copyright-content">{{ powered_by_link }}</span>
     </div>
-      {%- if section.settings.show_policy -%}
-        <ul class="footer__policies list-unstyled">
-          {%- for policy in shop.policies -%}
-            {%- if policy != blank -%}
-              <li>
-                <span class="footer__policies-item"
-                  ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></span
-                >
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
 
   </div>
   
