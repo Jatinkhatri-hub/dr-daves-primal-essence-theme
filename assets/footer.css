@@ -113,7 +113,10 @@
   overflow: hidden;
 }
 
-.dd
+.dd__field-input {
+  background: white;
+  
+}
 
 
 .dd__custom-field::after {
