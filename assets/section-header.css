@@ -364,7 +364,7 @@
   }
 
   .nav-bar__menu-item {
-    font: 500 16px 'Montserrat';
+    font: 400 16px 'Sofia Pro ';
     color: rgb(var(--color-foreground));
     text-transform: capitalize;
     text-decoration: none;
