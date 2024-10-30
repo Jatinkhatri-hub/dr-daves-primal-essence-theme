@@ -322,6 +322,10 @@
     text-align: start;
   }
 
+  .footer__menu-wrapper-child {
+    height: fit-content;
+  }
+
 }
 
 
