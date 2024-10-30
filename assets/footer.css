@@ -174,9 +174,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  /* gap: 3px;
   padding-top: 15px;
-  padding-inline: 15px;
+  padding-inline: 15px; */
   background-color: #A2C4C5;
   margin-top: 50px;
 }
