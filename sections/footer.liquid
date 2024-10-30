@@ -75,9 +75,8 @@
           {%- endif -%} 
           {%- if settings.brand_description != blank -%}
             <div class="footer__brand-description">
-              <p>
               {{ settings.brand_description }}
-               <span class="footer__brand-email">{{ settings.brand_headline }}</span></p></div>
+            </div>
           {%- endif -%}
           {%- if block.settings.show_social and has_social_icons -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
