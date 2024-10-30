@@ -26,11 +26,19 @@
             "heading": "Quick links",
             "menu": "primal-essence"
           }
+        },
+        "newsletter_RXDWhn": {
+          "type": "newsletter",
+          "settings": {
+            "Title": "Subscribe",
+            "description": "Join the Primal Essence community for exclusive tips and product updates. Subscribe now!"
+          }
         }
       },
       "block_order": [
         "brand_information_rm7JcD",
-        "link_list_twCKfk"
+        "link_list_twCKfk",
+        "newsletter_RXDWhn"
       ],
       "settings": {
         "color_scheme": "scheme-a95b59ad-3f4e-4585-8aec-fbc029173b49",
