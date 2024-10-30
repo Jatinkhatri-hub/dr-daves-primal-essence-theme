@@ -99,7 +99,7 @@
 }
 
 .nav-drawer__title {
-  font: 800 25px 'Futura PT Bold';
+  font: 800 28px 'Futura PT Bold';
   color: rgb(var(--color-foreground));
   text-align: start;
   margin: 0;
