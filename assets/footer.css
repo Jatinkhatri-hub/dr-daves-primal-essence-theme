@@ -129,7 +129,9 @@
 }
 
 .field__button.custom {
-  height: ;
+  height: 45px;
+  width: 45px;
+  
 }
 
 .dd__custom-field::after {
