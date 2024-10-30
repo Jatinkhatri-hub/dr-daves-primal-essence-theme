@@ -1,5 +1,6 @@
 .footer {
-  border-top-left-radius: ;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
 }
 
 .footer__wrapper {
