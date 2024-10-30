@@ -259,7 +259,8 @@
 
   .footer__menu-list {
     flex-direction: row;
-    gap: 70px
+    gap: 70px;
+    align-items: ;
   }
 
   .footer__list-item {
