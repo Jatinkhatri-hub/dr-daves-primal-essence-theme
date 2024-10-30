@@ -95,7 +95,7 @@
                 class="footer__list-item"
               >
                 {{ link.title |  escape }}
-              {% if link.links != blank %} {%  render 'icon-arrow-down' %}  {% endif %}
+              {% if link.links != blank %} {{ 'icon-arrow-down.svg' | inline_asset_content }}  {% endif %} 
               </a>
               {% if link.links != blank %}
                 <div class="footer__menu-wrapper-child">
