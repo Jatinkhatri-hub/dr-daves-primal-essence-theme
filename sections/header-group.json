@@ -52,11 +52,19 @@
             "product": "natural-tallow-deodorant",
             "product_review": "1,000+ reviews"
           }
+        },
+        "button_Vfqw8z": {
+          "type": "button",
+          "settings": {
+            "button_url": "shopify://collections/best-sellers",
+            "button_text": "SHOP NOW"
+          }
         }
       },
       "block_order": [
         "product_6HtfyH",
-        "product_QYYV3j"
+        "product_QYYV3j",
+        "button_Vfqw8z"
       ],
       "settings": {
         "color_scheme": "scheme-1",
