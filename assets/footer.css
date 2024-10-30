@@ -260,7 +260,7 @@
   .footer__menu-list {
     flex-direction: row;
     gap: 70px;
-    align-items: ;
+    align-items: baseline;
   }
 
   .footer__list-item {
@@ -330,6 +330,10 @@
     align-items: baseline;
     gap: 17px;
     margin-top: 17px;
+  }
+
+  .footer-dropdown {
+    display: none;
   }
 
 }
