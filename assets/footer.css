@@ -182,8 +182,8 @@
 }
 
 .footer__copyright-content {
-  font: ;
-  color: rgb(var(--color-foreground));
+  font: 10px 'Sofia Pro Light';
+  color: #0A3437;
 }
 
 .footer__copyright-content a {
