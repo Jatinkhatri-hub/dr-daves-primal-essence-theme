@@ -123,7 +123,9 @@
   overflow: hidden;
 }
 
-
+.field__label.custom {
+  font: ;
+}
 
 .dd__custom-field::after {
   border-radius: 8px;
