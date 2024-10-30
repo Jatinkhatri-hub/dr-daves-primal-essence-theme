@@ -81,7 +81,9 @@
     transition: max-height 0.3s ease-out; /* Transition for the dropdown */
   }
 
-  .footer__menu-wrapper
+  .footer__menu-wrapper-child a {
+    font: 16px
+  }
   
   .footer__menu-wrapper-child.visible {
     max-height: 400px; /* Set to a maximum height that can fit the child links */
