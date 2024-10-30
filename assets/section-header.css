@@ -321,8 +321,9 @@
 
 .product__badge {
   font: 500 14px 'Futura PT Medium';
-  background-color: #FAE2FF;
+  background-color: #155F64;
   border-radius: 2px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
