@@ -177,6 +177,8 @@
   padding: 13px 8px;
   background-color: #A2C4C5;
   margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer__copyright-content {
