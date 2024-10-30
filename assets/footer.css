@@ -246,6 +246,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding-inline: 120px;
+    padding-bottom: 80px;
   }
 
   .footer__brand-info {
