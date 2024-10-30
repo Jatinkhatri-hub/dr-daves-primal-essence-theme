@@ -258,7 +258,9 @@
     align-items: baseline;
   }
 
-  .footer
+  .footer-block__newsletter {
+    width: 100%;
+  }
 
 }
 
