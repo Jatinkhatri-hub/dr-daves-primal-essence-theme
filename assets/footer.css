@@ -15,6 +15,7 @@
 
 .footer__brand-heading {
   font: 800 22px 'Sofia Pro Bold';
+  margin: 0;
 }
 
 .footer__brand-description {
