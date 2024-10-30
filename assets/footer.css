@@ -32,9 +32,6 @@
   margin-block: 1em 0;
 }
 
-.footer__brand-email {
-  font: 700 18px 'Montserrat';
-}
 
 .footer__menu-list {
   display: flex;
