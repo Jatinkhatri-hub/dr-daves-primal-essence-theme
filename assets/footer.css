@@ -110,7 +110,8 @@
 
 
 .dd__custom-field {
-  
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .newsletter__description {
