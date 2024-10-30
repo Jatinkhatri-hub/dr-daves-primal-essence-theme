@@ -96,7 +96,7 @@
               {% if link.links != blank %}
                 <div class="footer__menu-wrapper-child">
                   {% for child in link.links %} 
-                    
+                    <a href="{{ child.url }}"></a>
                   {% endfor %}
                 </div>
               {% endif %}
