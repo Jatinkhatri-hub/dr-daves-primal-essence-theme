@@ -38,46 +38,8 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "product_6HtfyH": {
-          "type": "product",
-          "settings": {
-            "product": "tallow-balm",
-            "product_review": "1,000+ reviews"
-          }
-        },
-        "product_QYYV3j": {
-          "type": "product",
-          "settings": {
-            "product": "natural-tallow-deodorant",
-            "product_review": "1,000+ reviews"
-          }
-        },
-        "button_Vfqw8z": {
-          "type": "button",
-          "settings": {
-            "button_url": "shopify://collections/best-sellers",
-            "button_text": "SHOP NOW"
-          }
-        },
-        "menu_7nnGik": {
-          "type": "menu",
-          "settings": {
-            "menu": "primal-essence-nav"
-          }
-        }
-      },
-      "block_order": [
-        "product_6HtfyH",
-        "product_QYYV3j",
-        "button_Vfqw8z",
-        "menu_7nnGik"
-      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "menu_color_scheme": "",
-        "menu": "primal-essence-1",
-        "navdrawer__img": "shopify://shop_images/logo_1.png"
+        "color_scheme": "scheme-1"
       }
     }
   },
