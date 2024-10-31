@@ -76,7 +76,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
-        "menu": "primal-essence-1"
+        "menu": "primal-essence-1",
+        "navdrawer__img": "shopify://shop_images/logo_1.png"
       }
     }
   },
