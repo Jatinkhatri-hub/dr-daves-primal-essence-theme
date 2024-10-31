@@ -37,6 +37,8 @@
   font: 400 16px 'Sofia Pro Light';
   color: rgb(var(--color-foreground));
   margin-block: 1em 0;
+  padding-inline: 35px;
+  
 }
 
 
