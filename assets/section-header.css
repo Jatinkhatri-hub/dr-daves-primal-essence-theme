@@ -44,7 +44,7 @@
   left: -999px;
   bottom: 0;
   right: 0;
-  overflow: hidden;
+  overflow: auto;
   max-width: 450px;
   grid-template-rows: 60px 1fr 35px;
   transition: left 0.5s ease-in-out;
