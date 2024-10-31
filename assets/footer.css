@@ -82,7 +82,7 @@
   .footer__menu-wrapper-child {
     max-height: 0; /* Initially hidden */
     overflow: hidden;
-    transition: opacity 0.3s ease-in-out max-height 0.3s ease-in-out; /* Transition for the dropdown */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* Transition for the dropdown */
     opacity: 0;
   }
 
