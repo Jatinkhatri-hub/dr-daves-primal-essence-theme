@@ -80,7 +80,7 @@
               </div>
               <div>
                 {% comment %} <img src="{{ block.settings.product.featured_image |  image_url: width: 110 }}" class="nav-drawer__product-img"> {% endcomment %}
-                {{ block.settings.product.featured_image |  image_url: width: block.settings.product.featured_image.width |  image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll  }}
+                {{ block.settings.product.featured_image |  image_url: width: block.settings.product.featured_image.width |  image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "nav-drawer__product-img" }}
               </div>
   
             </a>
