@@ -52,7 +52,7 @@
  <div class="nav-drawer__wrapper">
   <div class="nav-drawer__header">
     <img src="{{ section.settings.navdrawer__img |  image_url: width: 45 }}"  class="nav-drawer__img">
-    {{ section.settings.navdrawer__img |  image_url: width: block.settings.product.featured_image.width |  image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "nav-drawer__product-img" }}
+    {{ section.settings.navdrawer__img |  image_url: section.settings.navdrawer__img.width |  image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "nav-drawer__product-img" }}
 
     <span id="closeNav" class="nav-drawer__close-btn">
       {{'icon-cross.svg' | inline_asset_content}}
