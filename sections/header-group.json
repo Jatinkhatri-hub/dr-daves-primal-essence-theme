@@ -39,7 +39,9 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "",
+        "menu": "primal-essence-1"
       }
     }
   },
