@@ -97,6 +97,7 @@
     max-height: 400px; /* Set to a maximum height that can fit the child links */
     /* Adjust 200px as needed depending on how many links you have */
     padding: 10px 0;
+    padding-left: 20px;
     opacity: 1;
 
   }
