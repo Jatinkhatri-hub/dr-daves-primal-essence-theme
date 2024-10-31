@@ -47,7 +47,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   text-transform: capitalize;
   padding: 0;
 }
