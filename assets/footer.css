@@ -261,6 +261,10 @@
     align-items: baseline;
   }
 
+  .footer__brand-heading {
+    padding-left: 20px;
+  }
+
   .footer__brand-description p {
     text-align: start;
     padding-inline: 20px 0;
