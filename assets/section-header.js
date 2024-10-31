@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   closeNavBtn.addEventListener('click', () => {
     navContainer.classList.remove('open');
     document.body.classList.remove('no-scroll');
+    document.body.style.overflow = '';
   });
 
 });
