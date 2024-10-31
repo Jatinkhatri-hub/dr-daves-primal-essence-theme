@@ -82,7 +82,7 @@
   .footer__menu-wrapper-child {
     max-height: 0; /* Initially hidden */
     overflow: hidden;
-    transition: max-height 0.3s ease-out; /* Transition for the dropdown */
+    transition: opacity 0.3sec max-height 0.3s ease-out; /* Transition for the dropdown */
     opacity: 0;
   }
 
@@ -97,7 +97,7 @@
     max-height: 400px; /* Set to a maximum height that can fit the child links */
     /* Adjust 200px as needed depending on how many links you have */
     padding: 10px 0;
-    o
+    opacity: 1;
 
   }
 
