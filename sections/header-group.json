@@ -38,6 +38,26 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "product_aENBfT": {
+          "type": "product",
+          "settings": {
+            "product": "tallow-balm",
+            "product_review": "1000+ reviews"
+          }
+        },
+        "product_rrLXyR": {
+          "type": "product",
+          "settings": {
+            "product": "natural-tallow-deodorant",
+            "product_review": "1000+ reviews"
+          }
+        }
+      },
+      "block_order": [
+        "product_aENBfT",
+        "product_rrLXyR"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "menu_color_scheme": "",
