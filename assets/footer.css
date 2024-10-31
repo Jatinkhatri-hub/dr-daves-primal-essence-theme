@@ -278,6 +278,7 @@
 
   .footer__list-item {
     font-size: 24px;
+    text-align: start;
   }
 
   .footer__terms-wrapper {
