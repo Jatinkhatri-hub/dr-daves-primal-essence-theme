@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   openNavBtn.addEventListener('click', () => {
     navContainer.classList.add('open');
     document.body.classList.add('no-scroll');
-    document.body.style.
+    document.body.style.overflow = 'hidden';
   });
 
   closeNavBtn.addEventListener('click', () => {
