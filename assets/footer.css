@@ -263,8 +263,7 @@
 
   .footer__brand-description p {
     text-align: start;
-    padding-left: 20px;
-    padd
+    padding-inline: 20px 0;
   }
 
   .footer__menu-list {
