@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   openNavBtn.addEventListener('click', () => {
     navContainer.classList.add('open');
     document.body.classList.add('no-scroll');
+    document.body.style.overflow = 'hidden';
   });
 
   closeNavBtn.addEventListener('click', () => {
     navContainer.classList.remove('open');
     document.body.classList.remove('no-scroll');
+    document.body.style.overflow = '';
   });
 
 });
