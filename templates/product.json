@@ -64,7 +64,7 @@
         "custom_liquid_Tn9AUF": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<ul>\n<li>productId: {{ product.id }}</li>\n<li>productType: {{product.type}}</li>\n<li>{{product.title}}</li>\n<li>email: jatinkhatri245@gmail.com</li>\n<li>page: 1</li>\n<li>dateFrom: '2024-01-01'</li>\n<li>dateTo: '2024-12-31'</li>\n<li>sortReviews: 'recent'</li>\n<li>tags: '' </li>\n<li>https://quickstart-e9e06218.myshopify.com/</li>\n</ul>"
+            "custom_liquid": "<ul>\n<li>productId: {{ product.id }}</li>\n<li>productType: {{product.type}}</li>\n<li>{{product.title}}</li>\n<li>email: jatinkhatri245@gmail.com</li>\n<li>page: 1</li>\n<li>dateFrom: '2024-01-01'</li>\n<li>dateTo: '2024-12-31'</li>\n<li>sortReviews: 'recent'</li>\n<li>tags: {{ product.tags }}</li>\n<li>https://quickstart-e9e06218.myshopify.com/</li>\n</ul>"
           }
         }
       },
