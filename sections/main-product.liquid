@@ -727,250 +727,140 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-
-    class StampedReviewsAPI {
-  constructor(storeHash, apiKey) {
-    this.baseUrl = `https://stamped.io/api/v2/${storeHash}/dashboard/reviews`;
-    this.apiKey = apiKey;
-  }
-
-  async getReviews({
-    search = '',
-    rating = '',
-    state = '',
-    dateFrom = '',
-    dateTo = '',
-    email = ''
-  } = {}) {
-    try {
-      // Build query parameters
-      const params = new URLSearchParams({
-        ...(search && { search }),
-        ...(rating && { rating }),
-        ...(state && { state }),
-        ...(dateFrom && { dateFrom }),
-        ...(dateTo && { dateTo }),
-        ...(email && { email })
-      });
-
-      const queryString = params.toString();
-      const url = queryString ? `${this.baseUrl}?${queryString}` : this.baseUrl;
-
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+    class StampedWidgetAPI {
+      constructor(storeUrl) {
+        this.baseUrl = 'https://stamped.io/api/widget/reviews';
+        this.storeUrl = storeUrl;
       }
-
-      const data = await response.json();
-      return data;
-
-    } catch (error) {
-      console.error('Error fetching reviews:', error);
-      throw error;
+    
+      async getWidgetReviews({
+        productId,
+        productType,
+        productTitle,
+        email,
+        page = '1',
+        dateFrom = '',
+        dateTo = '',
+        sortReviews = 'recent',
+        tags = ''
+      }) {
+        try {
+          // Validate required parameters
+          if (!productId || !productType || !productTitle) {
+            throw new Error('productId, productType, and productTitle are required');
+          }
+    
+          // Build query parameters
+          const params = new URLSearchParams({
+            productId,
+            productType,
+            productTitle: encodeURIComponent(productTitle),
+            email: email || '',
+            page,
+            dateFrom,
+            dateTo,
+            sortReviews,
+            tags,
+            storeUrl: this.storeUrl
+          });
+    
+          const url = `${this.baseUrl}?${params.toString()}`;
+    
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+    
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+    
+          const data = await response.json();
+          return data;
+    
+        } catch (error) {
+          console.error('Error fetching widget reviews:', error);
+          throw error;
+        }
+      }
+    
+      // Helper method for getting reviews with date range
+      async getReviewsByDateRange({
+        productId,
+        productType,
+        productTitle,
+        startDate,
+        endDate,
+        sortReviews = 'recent'
+      }) {
+        return this.getWidgetReviews({
+          productId,
+          productType,
+          productTitle,
+          dateFrom: new Date(startDate).toISOString(),
+          dateTo: new Date(endDate).toISOString(),
+          sortReviews
+        });
+      }
+    
+      // Helper method for getting paginated reviews
+      async getReviewsByPage({
+        productId,
+        productType,
+        productTitle,
+        pageNumber = 1,
+        sortReviews = 'recent'
+      }) {
+        return this.getWidgetReviews({
+          productId,
+          productType,
+          productTitle,
+          page: pageNumber.toString(),
+          sortReviews
+        });
+      }
+    
+      // Helper method for getting reviews with specific tags
+      async getReviewsByTags({
+        productId,
+        productType,
+        productTitle,
+        tagsList = []
+      }) {
+        return this.getWidgetReviews({
+          productId,
+          productType,
+          productTitle,
+          tags: tagsList.join(',')
+        });
+      }
     }
-  }
-
-  // Example usage of filtering reviews
-  async getFilteredReviews(minRating = 1) {
-    try {
-      const reviews = await this.getReviews({ rating: minRating });
-      return reviews;
-    } catch (error) {
-      console.error('Error fetching filtered reviews:', error);
-      throw error;
-    }
-  }
-
-  // Example usage of searching reviews
-  async searchReviews(searchTerm) {
-    try {
-      const reviews = await this.getReviews({ search: searchTerm });
-      return reviews;
-    } catch (error) {
-      console.error('Error searching reviews:', error);
-      throw error;
-    }
-  }
-
-  // Example usage of date range reviews
-  async getReviewsByDateRange(startDate, endDate) {
-    try {
-      const reviews = await this.getReviews({
-        dateFrom: new Date(startDate).getTime(),
-        dateTo: new Date(endDate).getTime()
-      });
-      return reviews;
-    } catch (error) {
-      console.error('Error fetching reviews by date range:', error);
-      throw error;
-    }
-  }
-}
-
-// Example usage:
-const reviewsApi = new StampedReviewsAPI(343480, '49b064ba9f49ba63701ede01feb8b24199f1e56dac94ce5fc85bab486c98bc43');
-
-// Get all reviews
-reviewsApi.getReviews()
-  .then(reviews => console.log('All reviews:', reviews))
-  .catch(error => console.error('Error:', error));
-
-// Get filtered reviews
-reviewsApi.getFilteredReviews(4)
-  .then(reviews => console.log('4+ star reviews:', reviews))
-  .catch(error => console.error('Error:', error));
-
-// Search reviews
-reviewsApi.searchReviews('great product')
-  .then(reviews => console.log('Search results:', reviews))
-  .catch(error => console.error('Error:', error));
-
-// Get reviews within date range
-reviewsApi.getReviewsByDateRange('2024-01-01', '2024-12-31')
-  .then(reviews => console.log('Date range reviews:', reviews))
-  .catch(error => console.error('Error:', error));
     
-    // class StampedWidgetAPI {
-    //   constructor(storeUrl) {
-    //     this.baseUrl = 'https://stamped.io/api/widget/reviews';
-    //     this.storeUrl = storeUrl;
-    //   }
+    // Example usage:
+    const widgetApi = new StampedWidgetAPI('quickstart-e9e06218.myshopify.com');
     
-    //   async getWidgetReviews({
-    //     productId,
-    //     productType,
-    //     productTitle,
-    //     email,
-    //     page = '1',
-    //     dateFrom = '',
-    //     dateTo = '',
-    //     sortReviews = 'recent',
-    //     tags = ''
-    //   }) {
-    //     try {
-    //       // Validate required parameters
-    //       if (!productId || !productType || !productTitle) {
-    //         throw new Error('productId, productType, and productTitle are required');
-    //       }
+    // Basic usage
+    widgetApi.getWidgetReviews({
+      productId: '{{ product.id }}',
+      productType: '{{ product.type }}',
+      productTitle: '{{ product.title }}',
+      sortReviews: 'recent'
+    })
+      .then(reviews => console.log('Product reviews:', reviews))
+      .catch(error => console.error('Error:', error));
     
-    //       // Build query parameters
-    //       const params = new URLSearchParams({
-    //         productId,
-    //         productType,
-    //         productTitle: encodeURIComponent(productTitle),
-    //         email: email || '',
-    //         page,
-    //         dateFrom,
-    //         dateTo,
-    //         sortReviews,
-    //         tags,
-    //         storeUrl: this.storeUrl
-    //       });
-    
-    //       const url = `${this.baseUrl}?${params.toString()}`;
-    
-    //       const response = await fetch(url, {
-    //         method: 'GET',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         }
-    //       });
-    
-    //       if (!response.ok) {
-    //         throw new Error(`HTTP error! status: ${response.status}`);
-    //       }
-    
-    //       const data = await response.json();
-    //       return data;
-    
-    //     } catch (error) {
-    //       console.error('Error fetching widget reviews:', error);
-    //       throw error;
-    //     }
-    //   }
-    
-    //   // Helper method for getting reviews with date range
-    //   async getReviewsByDateRange({
-    //     productId,
-    //     productType,
-    //     productTitle,
-    //     startDate,
-    //     endDate,
-    //     sortReviews = 'recent'
-    //   }) {
-    //     return this.getWidgetReviews({
-    //       productId,
-    //       productType,
-    //       productTitle,
-    //       dateFrom: new Date(startDate).toISOString(),
-    //       dateTo: new Date(endDate).toISOString(),
-    //       sortReviews
-    //     });
-    //   }
-    
-    //   // Helper method for getting paginated reviews
-    //   async getReviewsByPage({
-    //     productId,
-    //     productType,
-    //     productTitle,
-    //     pageNumber = 1,
-    //     sortReviews = 'recent'
-    //   }) {
-    //     return this.getWidgetReviews({
-    //       productId,
-    //       productType,
-    //       productTitle,
-    //       page: pageNumber.toString(),
-    //       sortReviews
-    //     });
-    //   }
-    
-    //   // Helper method for getting reviews with specific tags
-    //   async getReviewsByTags({
-    //     productId,
-    //     productType,
-    //     productTitle,
-    //     tagsList = []
-    //   }) {
-    //     return this.getWidgetReviews({
-    //       productId,
-    //       productType,
-    //       productTitle,
-    //       tags: tagsList.join(',')
-    //     });
-    //   }
-    // }
-    
-    // // Example usage:
-    // const widgetApi = new StampedWidgetAPI('quickstart-e9e06218.myshopify.com');
-    
-    // // Basic usage
-    // widgetApi.getWidgetReviews({
-    //   productId: '{{ product.id }}',
-    //   productType: '{{ product.type }}',
-    //   productTitle: '{{ product.title }}',
-    //   sortReviews: 'recent'
-    // })
-    //   .then(reviews => console.log('Product reviews:', reviews))
-    //   .catch(error => console.error('Error:', error));
-    
-    // // Get reviews with date range
-    // widgetApi.getReviewsByDateRange({
-    //   productId: '1234567890',
-    //   productType: 'Product',
-    //   productTitle: 'Example Product',
-    //   startDate: '2024-01-01',
-    //   endDate: '2024-12-31'
-    // })
-    //   .then(reviews => console.log('Date range reviews:', reviews))
-    //   .catch(error => console.error('Error:', error));
+    // Get reviews with date range
+    widgetApi.getReviewsByDateRange({
+      productId: '{{ product.id }}',
+      productType: '{{ product.type }}',
+      productTitle: '{{ product.title }}',
+      startDate: '2024-01-01',
+      endDate: '2024-12-31'
+    })
+      .then(reviews => console.log('Date range reviews:', reviews))
+      .catch(error => console.error('Error:', error));
     
     // // Get reviews by page
     // widgetApi.getReviewsByPage({
