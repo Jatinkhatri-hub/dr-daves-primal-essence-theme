@@ -765,7 +765,7 @@
           });
     
           const url = `${this.baseUrl}?${params.toString()}`;
-    
+          console.log("requesting Url:", url);    
           const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -837,15 +837,21 @@
         });
       }
     }
+
+    const productData = {
+      id: {{ product.id }},
+      type: "{{ product.type | escape }}",
+      title: "{{ product.title | escape }}"
+    };
     
     // Example usage:
     const widgetApi = new StampedWidgetAPI('quickstart-e9e06218.myshopify.com');
     
     // Basic usage
     widgetApi.getWidgetReviews({
-      productId: '{{ product.id }}',
-      productType: '{{ product.type }}',
-      productTitle: '{{ product.title }}',
+      productId: productData.id.toString(),
+      productType: productData.type,
+      productTitle: productData.title,
       sortReviews: 'recent'
     })
       .then(reviews => console.log('Product reviews:', reviews))
